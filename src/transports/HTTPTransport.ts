@@ -91,7 +91,7 @@ class HTTPTransport extends Transport {
   private static setupHeaders(headerOptions?: Record<string, string>): Headers {
     const headers = new Headers(headerOptions);
     // Overwrite header options to ensure correct content type.
-    headers.set("Content-Type", "application/json");
+    headers.set("Content-Type", "application/octet-stream");
     return headers;
   }
 }
