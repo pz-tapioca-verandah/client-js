@@ -103,7 +103,7 @@ class RequestManager {
   private makeRequest( method: string,
                        params: any[] | object,
                        id?: number | string | null): IJSONRPCRequest | IJSONRPCNotification {
-    if (id) {
+    if (id !== undefined && id !== null) {
       return { jsonrpc: "2.0", id, method, params };
     }
     return { jsonrpc: "2.0", method, params };
